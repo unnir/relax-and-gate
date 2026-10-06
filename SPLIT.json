@@ -1,0 +1,8 @@
+{
+  "_comment": "FROZEN 2026-08-20 before any optimization. Stratified by circuit size / macro count / utilization so each set spans the range. Test circuits are NEVER used to design the algorithm or pick parameters.",
+  "frozen_at": "2026-08-20",
+  "dev":  ["ibm01", "ibm04", "ibm06", "ibm07", "ibm09", "ibm11", "ibm12", "ibm14", "ibm15", "ibm17"],
+  "val":  ["ibm02", "ibm10", "ibm16"],
+  "test": ["ibm03", "ibm08", "ibm13", "ibm18"],
+  "all":  ["ibm01","ibm02","ibm03","ibm04","ibm06","ibm07","ibm08","ibm09","ibm10","ibm11","ibm12","ibm13","ibm14","ibm15","ibm16","ibm17","ibm18"]
+}

@@ -1,0 +1,351 @@
+{
+  "method": "Relax-and-Gate",
+  "frozenMethodCommit": "f264d1f8e0cd6efb82b72f260a87e1ab566f0a21",
+  "evidenceSnapshotCommit": "e80414af564a6f309189ecfb184201e638d0b652",
+  "resultDate": "2026-08-21",
+  "hardware": "NVIDIA L40S",
+  "mean900": 0.93662699922504,
+  "mean300": 0.9476722860853575,
+  "seedMeans300": [
+    0.9480846454339807,
+    0.9469038220310022,
+    0.9480283907910896
+  ],
+  "sampleStandardDeviation300": 0.0006661035192361969,
+  "publishedBaselines": {
+    "SA": 2.1251,
+    "RePlAce": 1.4578,
+    "GreedyRow": 2.2109,
+    "Archgen(rank1)": 0.9507,
+    "Carrotato(rank2)": 0.9522,
+    "JaneRT(rank3)": 0.9694
+  },
+  "baselineSource": "https://github.com/partcleda/macro-place-challenge-2026",
+  "verificationNote": "Campaign records report independent reference-evaluator verification. Website preparation recalculates aggregate and seed means; it does not rerun the GPU campaign or reference evaluator.",
+  "budgetNote": "300 and 900 seconds are nominal search budgets; measured elapsed time includes setup and final checks. Published baseline scores were obtained on different hardware.",
+  "circuits": [
+    {
+      "circuit": "ibm01",
+      "split": "dev",
+      "proxy900": 0.7555861809298972,
+      "proxy300Mean": 0.7657800085017077,
+      "proxy300Seeds": {
+        "0": 0.7680746912127283,
+        "1": 0.7628252794935162,
+        "2": 0.7664400547988787
+      },
+      "legal900": true,
+      "legal300": true,
+      "components900": {
+        "wirelength": 0.07036785405949178,
+        "density": 0.49960219160989944,
+        "congestion": 0.8708344621309112
+      },
+      "elapsed900": 901.164067029953
+    },
+    {
+      "circuit": "ibm02",
+      "split": "val",
+      "proxy900": 0.9133040051264556,
+      "proxy300Mean": 0.9236729090340684,
+      "proxy300Seeds": {
+        "0": 0.9216814918112732,
+        "1": 0.9203684985316472,
+        "2": 0.9289687367592849
+      },
+      "legal900": true,
+      "legal300": true,
+      "components900": {
+        "wirelength": 0.07723251255576132,
+        "density": 0.5777386229070312,
+        "congestion": 1.0944043622343576
+      },
+      "elapsed900": 900.4024469852448
+    },
+    {
+      "circuit": "ibm03",
+      "split": "test",
+      "proxy900": 0.8598302735315682,
+      "proxy300Mean": 0.8674695383055256,
+      "proxy300Seeds": {
+        "0": 0.8687640150049313,
+        "1": 0.8676657012414412,
+        "2": 0.8659788986702044
+      },
+      "legal900": true,
+      "legal300": true,
+      "components900": {
+        "wirelength": 0.08812574784898902,
+        "density": 0.5001508563139746,
+        "congestion": 1.0432581950511837
+      },
+      "elapsed900": 900.6919372081757
+    },
+    {
+      "circuit": "ibm04",
+      "split": "dev",
+      "proxy900": 0.8857019458959028,
+      "proxy300Mean": 0.896433348218158,
+      "proxy300Seeds": {
+        "0": 0.9003266856245901,
+        "1": 0.8963822449421077,
+        "2": 0.8925911140877761
+      },
+      "legal900": true,
+      "legal300": true,
+      "components900": {
+        "wirelength": 0.07660204475590378,
+        "density": 0.5190600928323902,
+        "congestion": 1.0991397094476079
+      },
+      "elapsed900": 900.3833525180817
+    },
+    {
+      "circuit": "ibm06",
+      "split": "dev",
+      "proxy900": 0.9801941134463984,
+      "proxy300Mean": 1.0038015349476737,
+      "proxy300Seeds": {
+        "0": 0.9982932980193447,
+        "1": 1.003445616101625,
+        "2": 1.0096656907220511
+      },
+      "legal900": true,
+      "legal300": true,
+      "components900": {
+        "wirelength": 0.0756705793691931,
+        "density": 0.5129998552311312,
+        "congestion": 1.2960472129232794
+      },
+      "elapsed900": 900.4435474872589
+    },
+    {
+      "circuit": "ibm07",
+      "split": "dev",
+      "proxy900": 0.9416433400943114,
+      "proxy300Mean": 0.9628511636451211,
+      "proxy300Seeds": {
+        "0": 0.9610448024703642,
+        "1": 0.962219127491559,
+        "2": 0.9652895609734402
+      },
+      "legal900": true,
+      "legal300": true,
+      "components900": {
+        "wirelength": 0.07758232349172203,
+        "density": 0.5571968560102247,
+        "congestion": 1.170925177194954
+      },
+      "elapsed900": 900.4154152870178
+    },
+    {
+      "circuit": "ibm08",
+      "split": "test",
+      "proxy900": 0.9831566144801013,
+      "proxy300Mean": 0.9939770062246442,
+      "proxy300Seeds": {
+        "0": 0.9927996268018893,
+        "1": 0.9987242156125076,
+        "2": 0.9904071762595359
+      },
+      "legal900": true,
+      "legal300": true,
+      "components900": {
+        "wirelength": 0.07630984147063498,
+        "density": 0.5437766300190293,
+        "congestion": 1.2699169159999033
+      },
+      "elapsed900": 900.5231697559357
+    },
+    {
+      "circuit": "ibm09",
+      "split": "dev",
+      "proxy900": 0.7523344399189216,
+      "proxy300Mean": 0.7575220285610459,
+      "proxy300Seeds": {
+        "0": 0.7549089501117929,
+        "1": 0.7620975153081713,
+        "2": 0.7555596202631734
+      },
+      "legal900": true,
+      "legal300": true,
+      "components900": {
+        "wirelength": 0.060313803332867455,
+        "density": 0.5100464403665823,
+        "congestion": 0.873994832805526
+      },
+      "elapsed900": 900.4191436767578
+    },
+    {
+      "circuit": "ibm10",
+      "split": "val",
+      "proxy900": 0.8992085120252451,
+      "proxy300Mean": 0.9112656666362502,
+      "proxy300Seeds": {
+        "0": 0.9143953601031782,
+        "1": 0.9084015001048817,
+        "2": 0.9110001397006907
+      },
+      "legal900": true,
+      "legal300": true,
+      "components900": {
+        "wirelength": 0.06585128042927335,
+        "density": 0.5042212029788112,
+        "congestion": 1.1624932602131322
+      },
+      "elapsed900": 900.5926892757416
+    },
+    {
+      "circuit": "ibm11",
+      "split": "dev",
+      "proxy900": 0.761163854907372,
+      "proxy300Mean": 0.7741018976784485,
+      "proxy300Seeds": {
+        "0": 0.7758330482279111,
+        "1": 0.7697234193575471,
+        "2": 0.7767492254498872
+      },
+      "legal900": true,
+      "legal300": true,
+      "components900": {
+        "wirelength": 0.06054406421472645,
+        "density": 0.500676820449889,
+        "congestion": 0.9005627609354022
+      },
+      "elapsed900": 900.4771332740784
+    },
+    {
+      "circuit": "ibm12",
+      "split": "dev",
+      "proxy900": 1.0662212411183878,
+      "proxy300Mean": 1.0767820598525464,
+      "proxy300Seeds": {
+        "0": 1.0779433443632755,
+        "1": 1.0768912650970122,
+        "2": 1.0755115700973512
+      },
+      "legal900": true,
+      "legal300": true,
+      "components900": {
+        "wirelength": 0.07126712117299715,
+        "density": 0.559218935472329,
+        "congestion": 1.4306893044184523
+      },
+      "elapsed900": 900.657044172287
+    },
+    {
+      "circuit": "ibm13",
+      "split": "test",
+      "proxy900": 0.8030923169131773,
+      "proxy300Mean": 0.8214278304148753,
+      "proxy300Seeds": {
+        "0": 0.8193751167884351,
+        "1": 0.8261275170748242,
+        "2": 0.8187808573813666
+      },
+      "legal900": true,
+      "legal300": true,
+      "components900": {
+        "wirelength": 0.060421854200224515,
+        "density": 0.5041600944730722,
+        "congestion": 0.9811808309528334
+      },
+      "elapsed900": 900.5112371444702
+    },
+    {
+      "circuit": "ibm14",
+      "split": "dev",
+      "proxy900": 1.0309291219072312,
+      "proxy300Mean": 1.0384468795043675,
+      "proxy300Seeds": {
+        "0": 1.0406776169066236,
+        "1": 1.0418166364546395,
+        "2": 1.0328463851518392
+      },
+      "legal900": true,
+      "legal300": true,
+      "components900": {
+        "wirelength": 0.06321456978089998,
+        "density": 0.5160950432203432,
+        "congestion": 1.4193340610323193
+      },
+      "elapsed900": 900.6981916427612
+    },
+    {
+      "circuit": "ibm15",
+      "split": "dev",
+      "proxy900": 0.9895465320100829,
+      "proxy300Mean": 1.0184699374010706,
+      "proxy300Seeds": {
+        "0": 1.0225284548246414,
+        "1": 1.0106092213396154,
+        "2": 1.022272136038955
+      },
+      "legal900": true,
+      "legal300": true,
+      "components900": {
+        "wirelength": 0.06961806593497318,
+        "density": 0.5121035296845735,
+        "congestion": 1.327753402465646
+      },
+      "elapsed900": 900.6249959468842
+    },
+    {
+      "circuit": "ibm16",
+      "split": "val",
+      "proxy900": 0.9579835072990999,
+      "proxy300Mean": 0.9717395714396412,
+      "proxy300Seeds": {
+        "0": 0.9687566280913733,
+        "1": 0.9711146224330817,
+        "2": 0.9753474637944686
+      },
+      "legal900": true,
+      "legal300": true,
+      "components900": {
+        "wirelength": 0.059603349899940886,
+        "density": 0.5144391112841916,
+        "congestion": 1.2823212035141263
+      },
+      "elapsed900": 901.0266489982605
+    },
+    {
+      "circuit": "ibm17",
+      "split": "dev",
+      "proxy900": 1.163617233407968,
+      "proxy300Mean": 1.1636397615373468,
+      "proxy300Seeds": {
+        "0": 1.1644022299177414,
+        "1": 1.1587892957686814,
+        "2": 1.1677277589256176
+      },
+      "legal900": true,
+      "legal300": true,
+      "components900": {
+        "wirelength": 0.06370820938599606,
+        "density": 0.5478249285587158,
+        "congestion": 1.6519931194852282
+      },
+      "elapsed900": 903.5071165561676
+    },
+    {
+      "circuit": "ibm18",
+      "split": "test",
+      "proxy900": 1.1791457538135603,
+      "proxy300Mean": 1.1630477215485862,
+      "proxy300Seeds": {
+        "0": 1.1676336120975783,
+        "1": 1.1601632981741785,
+        "2": 1.1613462543740014
+      },
+      "legal900": true,
+      "legal300": true,
+      "components900": {
+        "wirelength": 0.06779189648626054,
+        "density": 0.5848646568161178,
+        "congestion": 1.6378430578384817
+      },
+      "elapsed900": 904.4077503681183
+    }
+  ]
+}
