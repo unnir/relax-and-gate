@@ -1,0 +1,272 @@
+{
+ "rows": [
+  {
+   "label": "mass-conserving relaxation, then gate",
+   "group": "evaluator",
+   "budget": "90 s",
+   "control": 0.97133,
+   "variant": 0.92567,
+   "delta": -0.04566,
+   "verdict": "dequantized-exact-objective-as-surrogate",
+   "outcome": "win"
+  },
+  {
+   "label": "exact incremental re-scoring of moves",
+   "group": "evaluator",
+   "budget": "90 s",
+   "control": 0.92623,
+   "variant": 0.90101,
+   "delta": -0.02522,
+   "verdict": "exact-incremental-scoring-of-local-moves",
+   "outcome": "win"
+  },
+  {
+   "label": "dedicated optimiser for the soft macros",
+   "group": "search",
+   "budget": "400 s",
+   "control": 0.89202,
+   "variant": 0.89338,
+   "delta": 0.00136,
+   "verdict": "dedicated-optimizer-for-the-unconstrained-variable-subset",
+   "outcome": "loss"
+  },
+  {
+   "label": "adaptive operator selection, $\\alpha=0.30$",
+   "group": "search",
+   "budget": "45 s",
+   "control": 0.98582,
+   "variant": 0.99136,
+   "delta": 0.00554,
+   "verdict": "adaptive-operator-selection-by-yield",
+   "outcome": "loss"
+  },
+  {
+   "label": "adaptive operator selection, $\\alpha=0.15$",
+   "group": "search",
+   "budget": "45 s",
+   "control": 0.98582,
+   "variant": 0.99356,
+   "delta": 0.00774,
+   "verdict": "adaptive-operator-selection-by-yield",
+   "outcome": "loss"
+  },
+  {
+   "label": "bias displacements vertically ($1.5\\times$)",
+   "group": "search",
+   "budget": "45 s",
+   "control": 0.98248,
+   "variant": 0.99042,
+   "delta": 0.00794,
+   "verdict": "operator-plausibility-without-hit-rate",
+   "outcome": "loss"
+  },
+  {
+   "label": "multi-cycle alternation, 2 cycles",
+   "group": "search",
+   "budget": "90 s",
+   "control": 0.92716,
+   "variant": 0.93512,
+   "delta": 0.00796,
+   "verdict": "depth-before-breadth-under-a-convergence-time",
+   "outcome": "win"
+  },
+  {
+   "label": "multi-cycle alternation, 3 cycles",
+   "group": "search",
+   "budget": "90 s",
+   "control": 0.92716,
+   "variant": 0.93588,
+   "delta": 0.00872,
+   "verdict": "depth-before-breadth-under-a-convergence-time",
+   "outcome": "win"
+  },
+  {
+   "label": "replica-parallel basins, 3",
+   "group": "search",
+   "budget": "90 s",
+   "control": 0.92747,
+   "variant": 0.93634,
+   "delta": 0.00887,
+   "verdict": "depth-before-breadth-under-a-convergence-time",
+   "outcome": "win"
+  },
+  {
+   "label": "replica-parallel basins, 5",
+   "group": "search",
+   "budget": "90 s",
+   "control": 0.92747,
+   "variant": 0.93826,
+   "delta": 0.01079,
+   "verdict": "depth-before-breadth-under-a-convergence-time",
+   "outcome": "win"
+  },
+  {
+   "label": "relocate to a cold row / cold column",
+   "group": "search",
+   "budget": "45 s",
+   "control": 0.98248,
+   "variant": 0.99523,
+   "delta": 0.01275,
+   "verdict": "operator-plausibility-without-hit-rate",
+   "outcome": "loss"
+  },
+  {
+   "label": "both anisotropy operators together",
+   "group": "search",
+   "budget": "45 s",
+   "control": 0.98248,
+   "variant": 0.9993,
+   "delta": 0.01682,
+   "verdict": "operator-plausibility-without-hit-rate",
+   "outcome": "loss"
+  },
+  {
+   "label": "hand-boost the highest-yield operator",
+   "group": "search",
+   "budget": "45 s",
+   "control": 0.98582,
+   "variant": 1.01173,
+   "delta": 0.02591,
+   "verdict": "adaptive-operator-selection-by-yield",
+   "outcome": "loss"
+  },
+  {
+   "label": "cold start instead of the given placement",
+   "group": "search",
+   "budget": "400 s",
+   "control": 0.89957,
+   "variant": 1.60969,
+   "delta": 0.71012,
+   "verdict": "cold-start-instead-of-the-benchmark-placement",
+   "outcome": "loss"
+  }
+ ],
+ "ladder": [
+  [
+   "reference evaluator (pure Python)",
+   0.6,
+   "paper"
+  ],
+  [
+   "full GPU re-implementation",
+   12000,
+   "paper"
+  ],
+  [
+   "exact incremental, B=512 baseline",
+   1178,
+   "paper"
+  ],
+  [
+   "exact incremental re-scoring",
+   61230,
+   "paper"
+  ]
+ ],
+ "noise_band": 0.002,
+ "ablations": {
+  "budget_s": 90,
+  "circuits": [
+   "ibm01",
+   "ibm09",
+   "ibm17"
+  ],
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "results": {
+   "full method": {
+    "mean": 0.90802,
+    "std": 0.0037,
+    "per_circuit": {
+     "ibm01": 0.7746,
+     "ibm09": 0.7729,
+     "ibm17": 1.1765
+    }
+   },
+   "- analytical stage (discrete search only)": {
+    "mean": 0.92731,
+    "std": 0.0047,
+    "per_circuit": {
+     "ibm01": 0.7779,
+     "ibm09": 0.776,
+     "ibm17": 1.228
+    }
+   },
+   "- discrete stage (relaxation only)": {
+    "mean": 0.9838,
+    "std": 0.0048,
+    "per_circuit": {
+     "ibm01": 0.846,
+     "ibm09": 0.8345,
+     "ibm17": 1.2708
+    }
+   },
+   "- dynamic objective weights": {
+    "mean": 0.91431,
+    "std": 0.0014,
+    "per_circuit": {
+     "ibm01": 0.7715,
+     "ibm09": 0.7764,
+     "ibm17": 1.195
+    }
+   },
+   "- congestion-directed operator": {
+    "mean": 0.90691,
+    "std": 0.0014,
+    "per_circuit": {
+     "ibm01": 0.7729,
+     "ibm09": 0.7701,
+     "ibm17": 1.1777
+    }
+   },
+   "- connectivity-directed operator": {
+    "mean": 0.90501,
+    "std": 0.0027,
+    "per_circuit": {
+     "ibm01": 0.7719,
+     "ibm09": 0.7693,
+     "ibm17": 1.1739
+    }
+   },
+   "- parallel accept (one move per round)": {
+    "mean": 0.92167,
+    "std": 0.0025,
+    "per_circuit": {
+     "ibm01": 0.783,
+     "ibm09": 0.7842,
+     "ibm17": 1.1978
+    }
+   },
+   "- hard-macro repulsion in relaxation": {
+    "mean": 0.91919,
+    "std": 0.0103,
+    "per_circuit": {
+     "ibm01": 0.7951,
+     "ibm09": 0.777,
+     "ibm17": 1.1855
+    }
+   },
+   "- move annealing (fixed sigma)": {
+    "mean": 0.9114,
+    "std": 0.0032,
+    "per_circuit": {
+     "ibm01": 0.7764,
+     "ibm09": 0.7744,
+     "ibm17": 1.1834
+    }
+   },
+   "full method (repeat, drift check)": {
+    "mean": 0.90569,
+    "std": 0.003,
+    "per_circuit": {
+     "ibm01": 0.7721,
+     "ibm09": 0.7728,
+     "ibm17": 1.1721
+    }
+   }
+  }
+ }
+}

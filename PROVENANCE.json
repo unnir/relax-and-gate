@@ -8,7 +8,7 @@
   "evaluatorSha256": "49e5d0bb58fcb8e9ae4666bf1e11f8ba69baa49c2aa314cad82de8874237b29c",
   "files": {
     ".gitignore": {
-      "sha256": "da98386e066b379689368e2ec9348885096f6e4044dd3d9e58f8345c46eeba1d",
+      "sha256": "a743e3cb8f7e8828ca728bf7d6ed2a80362f065723ac6b02b207722d61738e59",
       "source": "public release"
     },
     "README.md": {

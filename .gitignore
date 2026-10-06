@@ -2,6 +2,6 @@
 __pycache__/
 *.pyc
 .DS_Store
-challenge/
-data/
-artifacts/repro/
+/challenge/
+/data/
+/artifacts/repro/
